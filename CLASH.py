@@ -3154,13 +3154,3 @@ if __name__ == "__main__":
 
 
     command_line()
-# os.chdir("/Users/luli/Dropbox (UFL)/Tianqi/Lu_Tianqi/CLASH all exp/Exp 371. 2024-03-06 CLASH 293T test/table")
-# Combined_table(outfile='293T_TDMD_Test_20240306.txt').input_multiple_raw_clash(viennad_files='S1_S1cutUMI_comp_martquery_0228172604_181_human_unique1_add18S28S_hybrids_ua_compressed_AUex_region_TDMD.txt,'
-#                                                                                              'S1_S5cutUMI_comp_martquery_0228172604_181_human_unique1_add18S28S_hybrids_ua_compressed_AUex_region_TDMD.txt,'
-#                                                                                              'S2_S2cutUMI_comp_martquery_0228172604_181_human_unique1_add18S28S_hybrids_ua_compressed_AUex_region_TDMD.txt,'
-#                                                                                              'S2_S6cutUMI_comp_martquery_0228172604_181_human_unique1_add18S28S_hybrids_ua_compressed_AUex_region_TDMD.txt,'
-#                                                                                              'S3_S3cutUMI_comp_martquery_0228172604_181_human_unique1_add18S28S_hybrids_ua_compressed_AUex_region_TDMD.txt,'
-#                                                                                              'S3_S7cutUMI_comp_martquery_0228172604_181_human_unique1_add18S28S_hybrids_ua_compressed_AUex_region_TDMD.txt,'
-#                                                                                              'S4_S4cutUMI_comp_martquery_0228172604_181_human_unique1_add18S28S_hybrids_ua_compressed_AUex_region_TDMD.txt,'
-#                                                                                              'S4_S8cutUMI_comp_martquery_0228172604_181_human_unique1_add18S28S_hybrids_ua_compressed_AUex_region_TDMD.txt')
-
