@@ -18,20 +18,13 @@ module load hyb
 
 module load unafold
 
-hyb analyse in=`test_cutN.fasta` db=`martquery_0228172604_181_human_unique1_add18S28S` type=mim pref=mim format=fasta
+hyb analyse in=`test_cutN.fasta` db=`human_transcript_database` type=mim pref=mim format=fasta
 
 ### 1.6 Calculate hybrids reads
-python3 CLASH.py hybrid_number_statistic -d `martquery_0228172604_181_human_unique1_add18S28S.fasta` -i `23090FL-01-01-01_S2.cutUMI_comp_martquery_0228172604_181_human_unique1_add18S28S_hybrids_ua.hyb`c
+python3 CLASH.py hybrid_number_statistic -d `human_transcript_database.fasta` -i `output_ua.hyb`
 
 ### 1.7 Potential TDMD miRNA-target RNA hybrids identification
-python3 CLASH.py Viennad_to_Table  -c `human_transcripts_CS_20220422.txt` -t `martquery_0228172604_181_human_unique1_add18S28S.fasta` -n `martquery_0228172604_181_name.txt` -i `23090FL-01-01-01_S2.cutUMI_comp_martquery_0228172604_181_human_unique1_add18S28S_hybrids_ua`
-
-```ruby
-martquery_0228172604_181_human_unique1_add18S28S.fasta file size is ???MB. The dataset folder has a small size file, called ???.
-  
-human_transcripts_CS_20220422.txt file size is ???G. The dataset folder has a small size file, called ???.
-```
-
+python3 CLASH.py Viennad_to_Table  -c `human_transcripts_CS_20220422.txt` -t `human_transcript.fasta` -n `human_transcript_name.txt` -i `output_hybrids_ua`
 
 ## 2 miRNA analysis
 
@@ -51,9 +44,7 @@ cutadapt -u 4 -u -4 -m 18 `test_collapsed.fasta` -o `test_cutN.fasta` -j 10
 python3 CLASH.py all_miRNA_isoform_table_2nd_18th -d `Exp326_Homo_mature_HSUR4_SpikeIn_miRNA.fa` -i `test.UMI.fasta`
 
 ### 2.6 Differential expression level analysis
-run `Deseq.R` code
+run `EdgeR.R` code
 
 ### 2.4 miRNA length distribution (isoform) count
 python3 isoform_length.py
-
-
